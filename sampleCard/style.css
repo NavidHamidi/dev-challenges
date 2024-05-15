@@ -3,6 +3,10 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Sora';
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
