@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <audio id="audio-player" ontimeupdate="onTimeUpdate(this)">
+            <source id="audio-source" src="./resources/lost-in-city-lights-145038.mp3" type="audio/mp3" music-id="0">
+        </audio>
+        <div class="container-info">
+            <img src="./resources/cover-1.png" class="cover" alt="music-cover" id="music-cover" />
+            <h5 class="title" id="music-title">Lost in the City Lights</h5>
+            <p class="description" id="music-author">Cosmo Sheldrake</p>
+        </div>
+        <div class="container-bar">
+            <div class="labels-bar">
+                <p id="music-time-current">00:00</p>
+                <p id="music-time-end">01:12</p>
+            </div>
+
+            <div class="progress-bar">
+                <progress id="bar" max="1" value="0"></progress>
+            </div>
+        </div>
+        <div class="container-commands">
+            <button class="command-change-music" onclick="setNextMusic()"><img
+                    src="./resources/Stop_and_play_fill-1.svg" alt="previous-music" class="commands" /></button>
+            <button id="play-btn" class="command-play-stop" onclick="playStopMusic()">
+                <img id="play-image" src="./resources/Play_fill.svg" alt="play-stop-music" class="commands" /></button>
+            <button class="command-change-music" onclick="setNextMusic()"><img
+                    src="./resources/Stop_and_play_fill_reverse.svg" alt="next-music" class="commands" /></button>
+        </div>
+
+    </div>
+</body>
+
+</html>
